@@ -79,14 +79,14 @@ export const styles = StyleSheet.create({
     paddingHorizontal: 100,
     height: 80,
   },
-  sendJobCoinsButton: {
+  sendBCsButton: {
     alignSelf: 'center',
     backgroundColor: 'blue',
     width: 200,
     height: 50,
     borderRadius: 30,
   },
-  sendJobCoinText: {
+  sendBCText: {
     color: 'white',
     fontSize: 14,
     marginVertical: 15,
@@ -119,12 +119,12 @@ export const styles = StyleSheet.create({
     paddingHorizontal: 10,
     height: 70,
   },
-  modalSendJobCoinsContainer: {
+  modalSendBCsContainer: {
     justifyContent: 'center',
     paddingHorizontal: 100,
     height: 60,
   },
-  modalSendJobCoinsButton: {
+  modalSendBCsButton: {
     alignItems: 'center',
     backgroundColor: 'blue',
     padding: 10,

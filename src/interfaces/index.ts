@@ -1,25 +1,25 @@
-import {JobCoinActionTypes} from '../enums';
+import {BCActionTypes} from '../enums';
 
 export interface SetAccountAction {
-  type: JobCoinActionTypes.saveAccountName;
+  type: BCActionTypes.saveAccountName;
   value: string;
 }
 
 export interface GetAddressInformationAction {
-  type: JobCoinActionTypes.getAddressInformation;
+  type: BCActionTypes.getAddressInformation;
 }
 
 export interface UpdateAccountBalanceAction {
-  type: JobCoinActionTypes.updateAccountBalance;
+  type: BCActionTypes.updateAccountBalance;
   value: string;
 }
 
-export interface TransferJobCoinAction {
-  type: JobCoinActionTypes.transferJobCoin;
+export interface TransferBCAction {
+  type: BCActionTypes.transferBC;
 }
 
 export interface SavingTransferRecipientAction {
-  type: JobCoinActionTypes.savedTransferRecipientAndAmount;
+  type: BCActionTypes.savedTransferRecipientAndAmount;
   value: {
     toAddress: string;
     amount: string;
@@ -27,16 +27,16 @@ export interface SavingTransferRecipientAction {
 }
 
 export interface ShowModalAction {
-  type: JobCoinActionTypes.showModal;
+  type: BCActionTypes.showModal;
   value: boolean;
 }
 
 export interface SignOutAction {
-  type: JobCoinActionTypes.signOut;
+  type: BCActionTypes.signOut;
 }
 
 export interface StoreAmountsActions {
-  type: JobCoinActionTypes.storeTransactionsAmounts;
+  type: BCActionTypes.storeTransactionsAmounts;
   value: {
     amount: number[];
     fromAddresses: string[];

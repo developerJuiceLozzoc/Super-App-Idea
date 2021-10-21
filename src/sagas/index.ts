@@ -1,5 +1,5 @@
 import {takeEvery, select, put} from 'redux-saga/effects';
-import {JobCoinActionTypes} from '../enums';
+import {BCActionTypes} from '../enums';
 import {
   getTempTransferAmountSelector,
   getTempTransferRecipientSelector,
@@ -12,7 +12,7 @@ export function* getAccountInformation() {
   const transactionsAmounts = [];
   const transactionsToAddress = [];
   const transactionsFromAddress = [];
-  const url = `http://jobcoin.gemini.com/coliseum-seventh/api/addresses/${account}`;
+  const url = '';
   const response = yield fetch(url, {
     method: 'GET',
     headers: {
@@ -40,11 +40,12 @@ export function* getAccountInformation() {
   }
 }
 
-export function* transferJobCoin() {
+export function* transferBC() {
   const account = yield select(savedAccountNameSelector);
   const tempAmount = yield select(getTempTransferAmountSelector);
   const tempTransferRecipient = yield select(getTempTransferRecipientSelector);
-  const url = 'http://jobcoin.gemini.com/coliseum-seventh/api/transactions';
+  //call to back office to get data
+  const url = '';
   const response = yield fetch(url, {
     method: 'POST',
     headers: {
@@ -62,8 +63,8 @@ export function* transferJobCoin() {
 
 export default function* mainSaga() {
   yield takeEvery(
-    JobCoinActionTypes.getAddressInformation,
+    BCActionTypes.getAddressInformation,
     getAccountInformation,
   );
-  yield takeEvery(JobCoinActionTypes.transferJobCoin, transferJobCoin);
+  yield takeEvery(BCActionTypes.transferBC, transferBC);
 }

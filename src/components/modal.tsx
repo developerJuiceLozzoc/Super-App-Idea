@@ -7,7 +7,7 @@ import {
   getAddressInformationAction,
   savingTransferRecipientAction,
   showModalAction,
-  transferJobCoinAction,
+  transferBCAction,
 } from '../actions';
 import {showModalSelector} from '../selectors';
 import {styles} from '../styles';
@@ -46,7 +46,7 @@ export const WrapperComponent = () => {
       dispatch(
         savingTransferRecipientAction(recipientAddress, recipientAmount),
       );
-      dispatch(transferJobCoinAction());
+      dispatch(transferBCAction());
       dispatch(getAddressInformationAction());
       setLoading(true);
       setTimeout(() => {
@@ -70,7 +70,7 @@ export const WrapperComponent = () => {
             </View>
           )}
           <Text style={styles.modalHeadlineText}>
-            Who would you like to send JobCoins to?
+            Who would you like to send BCs to?
           </Text>
           <View style={styles.modalRecipientTextContainer}>
             <TextInput
@@ -95,10 +95,10 @@ export const WrapperComponent = () => {
               Please enter in correct address and amount!
             </Text>
           )}
-          <View style={styles.modalSendJobCoinsContainer}>
+          <View style={styles.modalSendBCsContainer}>
             <TouchableOpacity
               onPress={onPressForTransfer}
-              style={styles.modalSendJobCoinsButton}>
+              style={styles.modalSendBCsButton}>
               <Text style={{color: 'white'}}>Send</Text>
             </TouchableOpacity>
           </View>

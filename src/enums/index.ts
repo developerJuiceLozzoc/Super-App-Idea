@@ -1,8 +1,8 @@
-export enum JobCoinActionTypes {
+export enum BCActionTypes {
   saveAccountName = 'SAVE_ACCOUNT_NAME',
   savePassword = 'SAVE_PASSWORD',
   getAddressInformation = 'GET_ADDRESS_INFORMATION',
-  transferJobCoin = 'TRANSFER_JOB_COIN',
+  transferBC = 'TRANSFER_BC_COIN',
   getAllTransactions = 'GET_ALL_TRANSACTIONS',
   updateAccountBalance = 'UPDATE_ACCOUNT_BALANCE',
   savedTransferRecipientAndAmount = 'SAVED_TRANSFER_RECIPIENT_AND_AMOUNT',

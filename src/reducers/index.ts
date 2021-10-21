@@ -1,21 +1,21 @@
 import {states} from '../states';
-import {JobCoinActionTypes} from '../enums';
+import {BCActionTypes} from '../enums';
 
 export const mainReducer = (state = states, action) => {
   switch (action.type) {
-    case JobCoinActionTypes.saveAccountName:
+    case BCActionTypes.saveAccountName:
       return {...state, account: action.value};
-    case JobCoinActionTypes.updateAccountBalance:
+    case BCActionTypes.updateAccountBalance:
       return {...state, accountBalance: action.value};
-    case JobCoinActionTypes.savedTransferRecipientAndAmount:
+    case BCActionTypes.savedTransferRecipientAndAmount:
       return {
         ...state,
         tempRecipientAmount: action.value.amount,
         toAddressTemp: action.value.toAddress,
       };
-    case JobCoinActionTypes.showModal:
+    case BCActionTypes.showModal:
       return {...state, showModal: action.value};
-    case JobCoinActionTypes.signOut:
+    case BCActionTypes.signOut:
       return {
         ...state,
         account: undefined,
@@ -30,7 +30,7 @@ export const mainReducer = (state = states, action) => {
         tempRecipientAmount: '',
         showModal: false,
       };
-    case JobCoinActionTypes.storeTransactionsAmounts:
+    case BCActionTypes.storeTransactionsAmounts:
       return {
         ...state,
         transactions: {

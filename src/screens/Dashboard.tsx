@@ -47,8 +47,8 @@ export const Dashboard = ({navigation}) => {
         <Charts />
       </View>
       <View style={styles.dashboardButtonsContainer}>
-        <TouchableOpacity style={styles.sendJobCoinsButton} onPress={showModal}>
-          <Text style={styles.sendJobCoinText}>Send JobCoins</Text>
+        <TouchableOpacity style={styles.sendBCsButton} onPress={showModal}>
+          <Text style={styles.sendBCText}>Send BCs</Text>
         </TouchableOpacity>
       </View>
       <TouchableOpacity style={styles.signOutButton} onPress={signOut}>

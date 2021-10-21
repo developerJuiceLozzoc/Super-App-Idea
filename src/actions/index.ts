@@ -1,4 +1,4 @@
-import {JobCoinActionTypes} from '../enums';
+import {BCActionTypes} from '../enums';
 import {
   GetAddressInformationAction,
   SavingTransferRecipientAction,
@@ -6,20 +6,20 @@ import {
   ShowModalAction,
   SignOutAction,
   StoreAmountsActions,
-  TransferJobCoinAction,
+  TransferBCAction,
   UpdateAccountBalanceAction
 } from '../interfaces';
 
 export const setAccountAction = (account: string): SetAccountAction => {
   return {
-    type: JobCoinActionTypes.saveAccountName,
+    type: BCActionTypes.saveAccountName,
     value: account,
   };
 };
 
 export const getAddressInformationAction = (): GetAddressInformationAction => {
   return {
-    type: JobCoinActionTypes.getAddressInformation,
+    type: BCActionTypes.getAddressInformation,
   };
 };
 
@@ -27,14 +27,14 @@ export const updateAccountBalanceAction = (
   balance: string,
 ): UpdateAccountBalanceAction => {
   return {
-    type: JobCoinActionTypes.updateAccountBalance,
+    type: BCActionTypes.updateAccountBalance,
     value: balance,
   };
 };
 
-export const transferJobCoinAction = (): TransferJobCoinAction => {
+export const transferBCAction = (): TransferBCAction => {
   return {
-    type: JobCoinActionTypes.transferJobCoin,
+    type: BCActionTypes.transferBC,
   };
 };
 
@@ -43,7 +43,7 @@ export const savingTransferRecipientAction = (
   amount: string,
 ): SavingTransferRecipientAction => {
   return {
-    type: JobCoinActionTypes.savedTransferRecipientAndAmount,
+    type: BCActionTypes.savedTransferRecipientAndAmount,
     value: {
       toAddress: toAddress,
       amount: amount,
@@ -53,14 +53,14 @@ export const savingTransferRecipientAction = (
 
 export const showModalAction = (show: boolean): ShowModalAction => {
   return {
-    type: JobCoinActionTypes.showModal,
+    type: BCActionTypes.showModal,
     value: show,
   };
 };
 
 export const signOutAction = (): SignOutAction => {
   return {
-    type: JobCoinActionTypes.signOut,
+    type: BCActionTypes.signOut,
   };
 };
 
@@ -70,7 +70,7 @@ export const storeAmountsAction = (
   fromAddresses: string[],
 ): StoreAmountsActions => {
   return {
-    type: JobCoinActionTypes.storeTransactionsAmounts,
+    type: BCActionTypes.storeTransactionsAmounts,
     value: {
       amount,
       toAddresses,
