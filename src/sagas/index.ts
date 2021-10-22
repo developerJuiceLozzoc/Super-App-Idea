@@ -6,13 +6,14 @@ import {
   savedAccountNameSelector,
 } from '../selectors';
 import {storeAmountsAction, updateAccountBalanceAction} from '../actions';
+import {SERVER_URLS} from "../config.js";
 
 export function* getAccountInformation() {
   const account = yield select(savedAccountNameSelector);
   const transactionsAmounts = [];
   const transactionsToAddress = [];
   const transactionsFromAddress = [];
-  const url = '';
+  const url = `${SERVER_URLS["GET_ACCOUNT_INFO"]}/${account}`;
   const response = yield fetch(url, {
     method: 'GET',
     headers: {
@@ -44,8 +45,7 @@ export function* transferBC() {
   const account = yield select(savedAccountNameSelector);
   const tempAmount = yield select(getTempTransferAmountSelector);
   const tempTransferRecipient = yield select(getTempTransferRecipientSelector);
-  //call to back office to get data
-  const url = '';
+  const url = SERVER_URLS["POST_NEW_TRANSACTION"];
   const response = yield fetch(url, {
     method: 'POST',
     headers: {

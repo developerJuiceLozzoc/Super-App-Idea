@@ -1,4 +1,4 @@
-package com.BC;
+package com.superappidea;
 
 import com.facebook.react.ReactActivity;
 
@@ -10,6 +10,6 @@ public class MainActivity extends ReactActivity {
    */
   @Override
   protected String getMainComponentName() {
-    return "BC";
+    return "SuperAppIdea";
   }
 }
