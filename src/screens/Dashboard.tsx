@@ -46,14 +46,16 @@ export const Dashboard = ({navigation}) => {
         </View>
         <Charts />
       </View>
-      <View style={styles.dashboardButtonsContainer}>
-        <TouchableOpacity style={styles.sendBCsButton} onPress={showModal}>
-          <Text style={styles.sendBCText}>Send BCs</Text>
+      <View style={styles.actionSheetBottomContainer}>
+        <View style={styles.dashboardButtonsContainer}>
+          <TouchableOpacity style={styles.sendBCsButton} onPress={showModal}>
+            <Text style={styles.sendBCText}>Send BCs</Text>
+          </TouchableOpacity>
+        </View>
+        <TouchableOpacity style={styles.signOutButton} onPress={signOut}>
+          <Text style={styles.signOutText}>Sign Out</Text>
         </TouchableOpacity>
       </View>
-      <TouchableOpacity style={styles.signOutButton} onPress={signOut}>
-        <Text style={styles.signOutText}>Sign Out</Text>
-      </TouchableOpacity>
     </View>
   );
 };

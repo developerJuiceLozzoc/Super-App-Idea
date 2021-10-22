@@ -74,10 +74,31 @@ export const styles = StyleSheet.create({
     fontSize: 40,
     color: 'white',
   },
+  actionSheetBottomContainer: {
+    height: 80 + 200 + 50,
+    marginTop: -45,
+  },
   dashboardButtonsContainer: {
     justifyContent: 'center',
-    paddingHorizontal: 100,
     height: 80,
+  },
+  signOutButton: {
+    alignSelf: 'center',
+    backgroundColor: 'red',
+    width: 125,
+    height: 33,
+    borderRadius: 30,
+    marginBottom: 25,
+    display: 'flex',
+    flexDirection: 'row',
+    justifyContent: 'center', //Centered horizontally
+  },
+  signOutText: {
+
+
+    color: 'white',
+    fontSize: 12,
+    alignItems: 'center', //Centered vertically
   },
   sendBCsButton: {
     alignSelf: 'center',
@@ -85,6 +106,9 @@ export const styles = StyleSheet.create({
     width: 200,
     height: 50,
     borderRadius: 30,
+    display: 'flex',
+    flexDirection: 'row',
+    justifyContent: 'center', //Centered horizontally
   },
   sendBCText: {
     color: 'white',
@@ -92,19 +116,8 @@ export const styles = StyleSheet.create({
     marginVertical: 15,
     marginHorizontal: 50
   },
-  signOutButton: {
-    alignSelf: 'center',
-    backgroundColor: 'red',
-    width: 200,
-    height: 50,
-    borderRadius: 30,
-  },
-  signOutText: {
-    color: 'white',
-    fontSize: 16,
-    marginVertical: 15,
-    marginHorizontal: 70,
-  },
+
+
   modalHeadlineText: {
     textAlign: 'center',
     fontSize: 30,

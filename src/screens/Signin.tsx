@@ -46,7 +46,7 @@ export const SignIn = ({navigation}) => {
         </View>
       )}
       <Text style={styles.logoName}>JobCoins</Text>
-      <View style={styles.inputView}>
+      {!loading && <View style={styles.inputView}>
         <TextInput
           ref={accountInput}
           style={styles.inputTextSignIn}
@@ -54,7 +54,7 @@ export const SignIn = ({navigation}) => {
           placeholderTextColor="#003f5c"
           onChangeText={text => setAccount(text)}
         />
-      </View>
+      </View>}
       <TouchableOpacity>
         {error && (
           <Text style={styles.signInErrorText}>Username is needed</Text>
@@ -63,7 +63,8 @@ export const SignIn = ({navigation}) => {
       <TouchableOpacity
         testID={'signIn:loginButton'}
         style={styles.loginBtn}
-        onPress={onPress}>
+        onPress={onPress}
+        disabled={loading}>
         <Text style={styles.loginText}>LOGIN</Text>
       </TouchableOpacity>
     </View>
